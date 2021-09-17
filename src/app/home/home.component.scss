@@ -1,0 +1,56 @@
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background: url('../../assets/images/capri.jpg');
+  background-size: 100%;
+  height: 600px;
+
+  .header-options {
+    display: flex;
+    flex-direction: row;
+
+    .option {
+      border: none;
+      background: none;
+      color: white;
+      width: 200px;
+      height: 100px;
+      font-size: 20px;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+      }
+    }
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 6.5rem;
+  }
+
+  .scroller {
+    width: 250px;
+    height: 70px;
+    background: #333;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    align-self: center;
+    position: absolute;
+    bottom: -35px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: white;
+      color: #333;
+      transition: 0.5s linear;
+      border-color: #333;
+    }
+  }
+}
