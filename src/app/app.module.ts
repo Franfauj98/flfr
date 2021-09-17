@@ -7,8 +7,8 @@ import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {CardHomeComponent} from "./card-home/card-home.component";
-import {ContentComponent} from "./content/content.component";
-import {HomeComponent} from './home/home.component';
+import {HomeComponent} from "./home/home.component";
+import {HeaderComponent} from './header/header.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -17,8 +17,8 @@ export function createTranslateLoader(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
     HomeComponent,
-    ContentComponent,
     CardHomeComponent
   ],
   imports: [
