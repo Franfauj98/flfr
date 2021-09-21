@@ -1,0 +1,32 @@
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+
+  .card {
+    width: 22rem;
+    display: flex;
+
+    .card-text {
+      text-align: center;
+    }
+
+    .more-photos {
+      position: absolute;
+      bottom: -18px;
+      display: flex;
+      left: calc(50% - 13px);
+      border: 1px solid #333;
+      border-radius: 52%;
+      padding: 8px;
+      background: white;
+
+      i {
+        position: relative;
+        background-color: white;
+        top: -2px;
+      }
+    }
+  }
+}

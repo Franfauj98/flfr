@@ -1,0 +1,13 @@
+<div class="card-container">
+  <ng-container *ngFor="let image of imagesToShow; let i = index;">
+    <div class="card" (click)="openMorePictures(i)">
+      <img class="card-img-top" [src]="image.pictureTitlePath.path" alt="Card image avocat">
+      <div class="card-body">
+        <p class="card-text">{{image.pictureTitlePath.text | translate}}</p>
+      </div>
+      <div [@openClose]="isOpen[i] ? 'open' : 'closed'" class="more-photos">
+        <i class="fa fa-chevron-up"></i>
+      </div>
+    </div>
+  </ng-container>
+</div>

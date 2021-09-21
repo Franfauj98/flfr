@@ -6,9 +6,11 @@ import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {CardHomeComponent} from "./card-home/card-home.component";
-import {HomeComponent} from "./home/home.component";
-import {HeaderComponent} from './header/header.component';
+import {CardHomeComponent} from "./component/card-home/card-home.component";
+import {HomeComponent} from "./component/home/home.component";
+import {HeaderComponent} from './component/header/header.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MorePicturesComponent} from "./component/more-pictures/more-pictures.component";
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -19,7 +21,8 @@ export function createTranslateLoader(http: HttpClient) {
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    CardHomeComponent
+    CardHomeComponent,
+    MorePicturesComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +36,7 @@ export function createTranslateLoader(http: HttpClient) {
       defaultLanguage: 'fr'
     }),
     HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [TranslateService],
   bootstrap: [AppComponent]
