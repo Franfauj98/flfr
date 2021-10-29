@@ -1,16 +1,16 @@
-import {HttpClient, HttpClientModule} from "@angular/common/http";
-import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {TranslateLoader, TranslateModule, TranslateService} from "@ngx-translate/core";
-import {TranslateHttpLoader} from "@ngx-translate/http-loader";
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
-import {AppRoutingModule} from './app-routing.module';
-import {AppComponent} from './app.component';
-import {CardHomeComponent} from "./component/card-home/card-home.component";
-import {HomeComponent} from "./component/home/home.component";
-import {HeaderComponent} from './component/header/header.component';
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {MorePicturesComponent} from "./component/more-pictures/more-pictures.component";
+import { AppRoutingModule } from '@flfr-app//app-routing.module';
+import { AppComponent } from '@flfr-app/app.component';
+import { HomeComponent } from '@flfr-app/component/home/home.component';
+import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
+import { HeaderComponent } from '@flfr-app/component/header/header.component';
+import { MorePicturesComponent } from '@flfr-app/component/more-pictures/more-pictures.component';
+import { CardHomeComponent } from '@flfr-app/component/card-home/card-home.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -19,13 +19,15 @@ export function createTranslateLoader(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     HomeComponent,
-    CardHomeComponent,
-    MorePicturesComponent
+    HeaderComponent,
+    MorePicturesComponent,
+    CardHomeComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
     AppRoutingModule,
     TranslateModule.forRoot({
       loader: {
@@ -34,13 +36,9 @@ export function createTranslateLoader(http: HttpClient) {
         deps: [HttpClient]
       },
       defaultLanguage: 'fr'
-    }),
-    HttpClientModule,
-    BrowserAnimationsModule,
+    })
   ],
   providers: [TranslateService],
   bootstrap: [AppComponent]
 })
-
-export class AppModule {
-}
+export class AppModule { }

@@ -1,5 +1,5 @@
-import {Component, Input} from '@angular/core';
-import {pictureTitlePath} from "../../models/PictureTitlePath";
+import { Component, Input } from '@angular/core';
+import { pictureTitlePath } from "@flfr-app//models/PictureTitlePath";
 
 @Component({
   selector: 'app-more-pictures',
@@ -9,5 +9,5 @@ import {pictureTitlePath} from "../../models/PictureTitlePath";
 export class MorePicturesComponent {
   @Input() imagesToShow: pictureTitlePath[] = [];
 
-  constructor() {}
+  constructor() { }
 }
