@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { animate, state, style, transition, trigger } from "@angular/animations";
-import { nestedPictureTitlePath, pictureTitlePath } from "@flfr-app/models/PictureTitlePath";
+import { animate, state, style, transition, trigger } from '@angular/animations';
+import { nestedPictureTitlePath, pictureTitlePath } from '@flfr-app/models/PictureTitlePath';
 
 @Component({
   selector: 'app-card-home',
@@ -57,7 +57,7 @@ export class CardHomeComponent {
     ];
   }
 
-  openMorePictures(i: number) {
+  openMorePictures(i: number): void {
     this.isOpen[i] = !this.isOpen[i];
     if (this.isOpen[i]) {
       this.isOpen.forEach((value, index) => {
