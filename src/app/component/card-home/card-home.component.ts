@@ -1,6 +1,6 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { animate, state, style, transition, trigger } from '@angular/animations';
-import { nestedPictureTitlePath, pictureTitlePath } from '@flfr-app/models/PictureTitlePath';
+import {animate, state, style, transition, trigger} from '@angular/animations';
+import {Component, EventEmitter, Output} from '@angular/core';
+import {nestedPictureTitlePath, pictureTitlePath} from '@flfr-app/models/PictureTitlePath';
 
 @Component({
   selector: 'app-card-home',
