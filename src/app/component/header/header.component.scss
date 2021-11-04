@@ -4,7 +4,7 @@
   flex-direction: column;
   color: white;
   background: url('../../../assets/images/toussaint.jpg');
-  background-size: 100%;
+  background-size: cover;
   height: 600px;
   box-shadow: #26394d 0 -8px 30px 17px;
 
@@ -25,6 +25,13 @@
       &:hover {
         cursor: pointer;
         opacity: 0.7;
+      }
+
+      &.selected {
+        text-decoration: underline;
+        text-decoration-color: blue;
+        text-decoration-style: double;
+        transition: width 1s ease-in-out;
       }
     }
 

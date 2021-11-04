@@ -1,10 +1,9 @@
 <div class="header" [ngClass]="{'scrolling-mode': scrollingMode}">
   <div class="header-options">
     <div>
-      <button class="option">{{"WEBSITE_TITLE_OPTION_1" | translate}}</button>
-      <button class="option">{{"WEBSITE_TITLE_OPTION_2" | translate}}</button>
-      <button class="option">{{"WEBSITE_TITLE_OPTION_3" | translate}}</button>
-      <button class="option">{{"WEBSITE_TITLE_OPTION_4" | translate}}</button>
+      <button class="option" [ngClass]="{'selected': option.selected}"
+              *ngFor="let option of options"
+              (click)="changePage(option)">{{option.libelle | translate}}</button>
     </div>
     <div *ngIf="scrollingMode" class="company">{{"WEBSITE_TITLE_LOGO" | translate}}</div>
   </div>
