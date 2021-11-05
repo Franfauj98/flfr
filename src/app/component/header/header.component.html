@@ -3,7 +3,7 @@
     <div>
       <button class="option" [ngClass]="{'selected': option.selected}"
               *ngFor="let option of options"
-              (click)="changePage(option)">{{option.libelle | translate}}</button>
+              (click)="changePage(option)"><a href="#">{{option.libelle | translate}}</a></button>
     </div>
     <div *ngIf="scrollingMode" class="company">{{"WEBSITE_TITLE_LOGO" | translate}}</div>
   </div>
@@ -16,4 +16,5 @@
     </div>
   </div>
   <button class="scroller">{{"WEBSITE_TITLE_OPTION_5" | translate}}</button>
+
 </div>

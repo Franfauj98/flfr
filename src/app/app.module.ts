@@ -11,6 +11,8 @@ import {HomeComponent} from '@flfr-app/component/home/home.component';
 import {MorePicturesComponent} from '@flfr-app/component/more-pictures/more-pictures.component';
 import {TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {ServiceWorkerModule} from '@angular/service-worker';
+import {environment} from '../environments/environment';
 
 export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -36,6 +38,12 @@ export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
         deps: [HttpClient]
       },
       defaultLanguage: 'fr'
+    }),
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
     })
   ],
   providers: [TranslateService],
