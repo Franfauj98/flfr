@@ -22,10 +22,10 @@
 
   <div class="title">
     <div class="main-title">
-      {{"WEBSITE_MOBILE_TITLE" | translate}}
+      {{(userAgentMobile ? "WEBSITE_MOBILE_TITLE" : "WEBSITE_TITLE") | translate}}
     </div>
     <div class="sub-title">
-      {{"WEBSITE_MOBILE_SUB_TITLE" | translate}}
+      {{(userAgentMobile ? "WEBSITE_MOBILE_SUB_TITLE" : "WEBSITE_SUB_TITLE") | translate}}
     </div>
   </div>
   <button class="scroller">{{"WEBSITE_TITLE_OPTION_5" | translate}}</button>
