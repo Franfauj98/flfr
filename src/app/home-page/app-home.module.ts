@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {CardHomeComponent} from '@flfr-app/home-page/components/card-home/card-home.component';
-import {HeaderComponent} from '@flfr-app/home-page/components/header/header.component';
 import {HomeComponent} from '@flfr-app/home-page/containers/home/home.component';
 import {MorePicturesComponent} from '@flfr-app/home-page/components/more-pictures/more-pictures.component';
 import {TranslateModule} from '@ngx-translate/core';
@@ -14,7 +13,6 @@ import {AppHomeRoutingModule} from '@flfr-app/home-page/app-home-routing.module'
   declarations: [
     AppHomeComponent,
     HomeComponent,
-    HeaderComponent,
     MorePicturesComponent,
     CardHomeComponent
   ],

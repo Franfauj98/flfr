@@ -3,13 +3,13 @@
   display: flex;
   flex-direction: column;
   color: white;
-  background: url('../../../../assets/images/toussaint.jpg');
+  background: url('../../../assets/images/toussaint.jpg');
   background-size: cover;
   height: 600px;
   box-shadow: #26394d 0 -8px 30px 17px;
 
   &.header-mobile {
-    background: url('../../../../assets/images/1636016070753.jpg') bottom;
+    background: url('../../../assets/images/1636016070753.jpg') bottom;
     background-size: 100%;
   }
 
