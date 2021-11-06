@@ -1,5 +1,5 @@
-<div class="header" [ngClass]="{'scrolling-mode': scrollingMode}">
-  <div class="header-options">
+<div class="header" [ngClass]="{'scrolling-mode': scrollingMode, 'header-mobile': userAgentMobile}">
+  <div class="header-options" *ngIf="!userAgentMobile">
     <div>
       <button class="option" [ngClass]="{'selected': option.selected}"
               *ngFor="let option of options"
@@ -7,12 +7,25 @@
     </div>
     <div *ngIf="scrollingMode" class="company">{{"WEBSITE_TITLE_LOGO" | translate}}</div>
   </div>
+
+  <div class="header-options-mobile" *ngIf="userAgentMobile" (click)="openMenuMobile()">
+    <button class="button-option-bars">
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="company">{{"WEBSITE_TITLE_LOGO" | translate}}</div>
+  </div>
+  <div class="menu-mobile-open" *ngIf="userAgentMobile && menuMobileOpen">
+    <button class="option" [ngClass]="{'selected': option.selected}"
+            *ngFor="let option of options"
+            (click)="changePage(option)"><a href="#">{{option.libelle | translate}}</a></button>
+  </div>
+
   <div class="title">
     <div class="main-title">
-      {{"WEBSITE_TITLE" | translate}}
+      {{"WEBSITE_MOBILE_TITLE" | translate}}
     </div>
     <div class="sub-title">
-      {{"WEBSITE_SUB_TITLE" | translate}}
+      {{"WEBSITE_MOBILE_SUB_TITLE" | translate}}
     </div>
   </div>
   <button class="scroller">{{"WEBSITE_TITLE_OPTION_5" | translate}}</button>

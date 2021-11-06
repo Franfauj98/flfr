@@ -11,6 +11,7 @@ export class HeaderComponent {
   @Input()
   scrollingMode = false;
   userAgentMobile = false;
+  menuMobileOpen = false;
   options = [new MenuOption('WEBSITE_TITLE_OPTION_1', true), new MenuOption('WEBSITE_TITLE_OPTION_2', false),
     new MenuOption('WEBSITE_TITLE_OPTION_3', false), new MenuOption('WEBSITE_TITLE_OPTION_4', false)];
 
@@ -22,5 +23,9 @@ export class HeaderComponent {
     this.options.forEach(opt => {
       opt.selected = opt.libelle === option.libelle;
     });
+  }
+
+  public openMenuMobile(): void {
+    this.menuMobileOpen = !this.menuMobileOpen;
   }
 }
