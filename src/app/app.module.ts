@@ -4,11 +4,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {AppRoutingModule} from '@flfr-app//app-routing.module';
-import {AppComponent} from '@flfr-app/app.component';
-import {CardHomeComponent} from '@flfr-app/component/card-home/card-home.component';
-import {HeaderComponent} from '@flfr-app/component/header/header.component';
-import {HomeComponent} from '@flfr-app/component/home/home.component';
-import {MorePicturesComponent} from '@flfr-app/component/more-pictures/more-pictures.component';
+import {AppComponent} from '@flfr-app/containers/app/app.component';
 import {TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {ServiceWorkerModule} from '@angular/service-worker';
@@ -20,11 +16,7 @@ export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomeComponent,
-    HeaderComponent,
-    MorePicturesComponent,
-    CardHomeComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

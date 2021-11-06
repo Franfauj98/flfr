@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {MenuOption} from '@flfr-app/models/MenuOption';
+import {MenuOption} from '@flfr-app/home-page/models/MenuOption';
 import {BrowserUtils} from '@flfr-app/utils/BrowserUtils';
 
 @Component({

@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {pictureTitlePath} from '@flfr-app//models/PictureTitlePath';
+import {pictureTitlePath} from '@flfr-app//home-page/models/PictureTitlePath';
 
 @Component({
   selector: 'app-more-pictures',

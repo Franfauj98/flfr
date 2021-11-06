@@ -1,5 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {pictureTitlePath} from '@flfr-app/models/PictureTitlePath';
+import {pictureTitlePath} from '@flfr-app/home-page/models/PictureTitlePath';
 import {fromEvent, Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
 

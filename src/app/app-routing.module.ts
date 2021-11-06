@@ -1,10 +1,15 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {HomeComponent} from '@flfr-app/component/home/home.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'home', component: HomeComponent}
+  {
+    path: '',
+    loadChildren: () => import('@flfr-app/home-page/app-home.module').then(m => m.AppHomeModule)
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('@flfr-app/home-page/app-home.module').then(m => m.AppHomeModule)
+  }
 ];
 
 @NgModule({
