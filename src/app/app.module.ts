@@ -10,6 +10,7 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {ServiceWorkerModule} from '@angular/service-worker';
 import {environment} from '../environments/environment';
 import {HeaderComponent} from '@flfr-app/component/header/header.component';
+import {FooterComponent} from './component/footer/footer.component';
 
 export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -18,7 +19,8 @@ export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

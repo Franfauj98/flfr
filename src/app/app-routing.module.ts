@@ -9,6 +9,10 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('@flfr-app/home-page/app-home.module').then(m => m.AppHomeModule)
+  },
+  {
+    path: 'contacts',
+    loadChildren: () => import('./contacts/contacts.module').then(m => m.ContactsModule)
   }
 ];
 
