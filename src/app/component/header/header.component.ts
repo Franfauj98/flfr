@@ -1,7 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {MenuOption} from '@flfr-app/models/MenuOption';
 import {BrowserUtils} from '@flfr-app/utils/BrowserUtils';
-import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -18,9 +17,9 @@ export class HeaderComponent {
     new MenuOption('WEBSITE_TITLE_OPTION_3', 'whoWeAre', false),
     new MenuOption('WEBSITE_TITLE_OPTION_4', 'contacts', false)];
 
-  constructor(private activatedRoute: ActivatedRoute) {
+  constructor() {
     this.userAgentMobile = BrowserUtils.isMobileDevice();
-    const optionSelected = this.options.find(o => this.activatedRoute.toString().endsWith(o.moduleRoute));
+    const optionSelected = this.options.find(o => document.URL.endsWith(o.moduleRoute));
     if (optionSelected) {
       this.changePage(optionSelected);
     }
