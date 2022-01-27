@@ -1,0 +1,12 @@
+.pictures-container {
+  transition: ease-in-out 1s;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  img {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+}

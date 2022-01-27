@@ -1,0 +1,9 @@
+<div class="container">
+  <ng-container>
+    <app-map id="app-map"></app-map>
+  </ng-container>
+  <ng-container>
+    <app-card-home (openNestedPictures)="openMorePictures($event)"></app-card-home>
+    <app-more-pictures *ngIf="toggle" [imagesToShow]="imagesToShow"></app-more-pictures>
+  </ng-container>
+</div>

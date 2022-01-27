@@ -1,9 +1,9 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {HomeComponent} from '@flfr-app/home-page/containers/home/home.component';
+import {HomeContainerComponent} from '@flfr-app/home-page/containers/home/home-container.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent}
+  {path: '', component: HomeContainerComponent}
 ];
 
 @NgModule({
