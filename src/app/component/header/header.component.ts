@@ -37,6 +37,6 @@ export class HeaderComponent {
   }
 
   public scroll(): void {
-    this.domService.scrollToElement('map-city');
+    this.domService.scrollToElement('scroller-button');
   }
 }

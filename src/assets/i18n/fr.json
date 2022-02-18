@@ -12,5 +12,22 @@
   "WEBSITE_TITLE_OPTION_5": "En savoir plus",
   "WEBSITE_CARD_PLANTE_POT": "Vos plantes en pot",
   "WEBSITE_CARD_PLANTE_EXTERIEUR": "Vos plantes d'extérieur",
-  "WEBSITE_CARD_PLANTE_BOUTURE": "Vos boutures"
+  "WEBSITE_CARD_PLANTE_BOUTURE": "Vos boutures",
+  "WEBSITE_NOUS_SUIVRE": "Nous suivre :",
+  "WEBSITE_NOUS_FAISONS": "Ce que nous faisons :",
+  "WEBSITE_NOUS_FAISONS_BOUQUETS": "Vos bouquets",
+  "WEBSITE_NOUS_FAISONS_COMPOSITIONS": "Vos compositions",
+  "WEBSITE_NOUS_FAISONS_MARIAGE": "Vos mariages",
+  "WEBSITE_NOUS_FAISONS_ENTERREMENT": "Vos gerbes",
+  "WEBSITE_NOUS_FAISONS_PLANTES": "Vos plantes",
+  "WEBSITE_NOUS_FAISONS_JARDIN": "Votre jardin",
+  "WEBSITE_QUICK_INFO_SAINT_VALENTIN_ICON": "fa fa-heart",
+  "WEBSITE_QUICK_INFO_SAINT_VALENTIN_TITLE": "Saint Valentin",
+  "WEBSITE_QUICK_INFO_SAINT_VALENTIN_INFO": "<b>Elle est chiante, insuportable, folle ?</b> <br/> Un p'tit bouquet la calmera pour un temps. <br/> PS : pas qu'une rose bande de pinces !",
+  "WEBSITE_QUICK_INFO_FETE_MERE_ICON": "fa fa-gift",
+  "WEBSITE_QUICK_INFO_FETE_MERE_TITLE": "Fête des mères",
+  "WEBSITE_QUICK_INFO_FETE_MERE_INFO": "<b>Qui y-a-t-il de plus important qu'une maman ?</b> <br/> Gâtez là ! Avec un beau bouquet on ne se trompe jamais...",
+  "WEBSITE_QUICK_INFO_TOUSSAINT_ICON": "fa fa-tree",
+  "WEBSITE_QUICK_INFO_TOUSSAINT_TITLE": "Toussaint",
+  "WEBSITE_QUICK_INFO_TOUSSAINT_INFO": "<b>Vous l'aimiez Mémé ?</b> <br/> Ne l'oubliez pas. Une tombe ça se salit, alors quand elle est fleurit c'est beau la vie !"
 }

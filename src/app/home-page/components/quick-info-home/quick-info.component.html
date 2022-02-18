@@ -1,7 +1,5 @@
 <div class="quick-info">
-  <ng-container>
-    <app-quick-info-element [icon]="'fa fa-tree'" [title]="'Saint Valentin'" [info]="'Fêtez la saint Valentin comme il se doit le plaisir d\'offrir ne devrait jamais être oublié'"></app-quick-info-element>
-    <app-quick-info-element [icon]="'fa fa-tree'" [title]="'Saint Valentin'" [info]="'Fêtez la saint Valentin comme il se doit le plaisir d\'offrir ne devrait jamais être oublié'"></app-quick-info-element>
-    <app-quick-info-element [icon]="'fa fa-tree'" [title]="'Saint Valentin'" [info]="'Fêtez la saint Valentin comme il se doit le plaisir d\'offrir ne devrait jamais être oublié'"></app-quick-info-element>
+  <ng-container *ngFor="let info of quickInfoList">
+    <app-quick-info-element class="element" [icon]="info.icon" [title]="info.title" [info]="info.info"></app-quick-info-element>
   </ng-container>
 </div>
