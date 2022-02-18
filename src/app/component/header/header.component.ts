@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {MenuOption} from '@flfr-app/models/MenuOption';
+import {DomService} from '@flfr-app/services/dom.service';
 import {BrowserUtils} from '@flfr-app/utils/BrowserUtils';
 
 @Component({
@@ -17,7 +18,7 @@ export class HeaderComponent {
     new MenuOption('WEBSITE_TITLE_OPTION_3', 'whoWeAre', false),
     new MenuOption('WEBSITE_TITLE_OPTION_4', 'contacts', false)];
 
-  constructor() {
+  constructor(private domService: DomService) {
     this.userAgentMobile = BrowserUtils.isMobileDevice();
     const optionSelected = this.options.find(o => document.URL.endsWith(o.moduleRoute));
     if (optionSelected) {
@@ -33,5 +34,9 @@ export class HeaderComponent {
 
   public openMenuMobile(): void {
     this.menuMobileOpen = !this.menuMobileOpen;
+  }
+
+  public scroll(): void {
+    this.domService.scrollToElement('map-city');
   }
 }

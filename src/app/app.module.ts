@@ -5,6 +5,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {AppRoutingModule} from '@flfr-app//app-routing.module';
 import {AppComponent} from '@flfr-app/containers/app/app.component';
+import {DomService} from '@flfr-app/services/dom.service';
 import {TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {ServiceWorkerModule} from '@angular/service-worker';
@@ -42,7 +43,7 @@ export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
       registrationStrategy: 'registerWhenStable:30000'
     })
   ],
-  providers: [TranslateService],
+  providers: [TranslateService, DomService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
