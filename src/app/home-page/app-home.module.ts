@@ -1,5 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CardHomeComponent} from '@flfr-app/home-page/components/card-home/card-home.component';
+import {CommitementComponent} from '@flfr-app/home-page/components/commitement-home/commitement.component';
 import {MapComponent} from '@flfr-app/home-page/components/map-home/map.component';
 import {QuickInfoElementComponent} from '@flfr-app/home-page/components/quick-info-element-home/quick-info-element.component';
 import {QuickInfoComponent} from '@flfr-app/home-page/components/quick-info-home/quick-info.component';
@@ -20,7 +21,8 @@ import {AppHomeRoutingModule} from '@flfr-app/home-page/app-home-routing.module'
     MapComponent,
     CardHomeComponent,
     QuickInfoComponent,
-    QuickInfoElementComponent
+    QuickInfoElementComponent,
+    CommitementComponent
   ],
   imports: [TranslateModule, CommonModule, ServiceWorkerModule, RouterModule, AppHomeRoutingModule],
   bootstrap: [AppHomeComponent]
