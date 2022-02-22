@@ -4,6 +4,7 @@ import {RouterModule} from '@angular/router';
 import {ServiceWorkerModule} from '@angular/service-worker';
 import {AppHomeRoutingModule} from '@flfr-app/home-page/app-home-routing.module';
 import {CardHomeComponent} from '@flfr-app/home-page/components/card-home/card-home.component';
+import {CarouselComponent} from '@flfr-app/home-page/components/carousel-home/carousel.component';
 import {MapComponent} from '@flfr-app/home-page/components/map-home/map.component';
 import {MorePicturesComponent} from '@flfr-app/home-page/components/more-pictures/more-pictures.component';
 import {QuickInfoElementComponent} from '@flfr-app/home-page/components/quick-info-element-home/quick-info-element.component';
@@ -22,7 +23,8 @@ import {TranslateModule} from '@ngx-translate/core';
     CardHomeComponent,
     QuickInfoComponent,
     QuickInfoElementComponent,
-    SectionTextComponent
+    SectionTextComponent,
+    CarouselComponent
   ],
   imports: [TranslateModule, CommonModule, ServiceWorkerModule, RouterModule, AppHomeRoutingModule],
   bootstrap: [AppHomeComponent]
