@@ -6,7 +6,7 @@
   background: url('../../../assets/images/imageFond.jpg');
   background-size: cover;
   height: 450px;
-  box-shadow: #26394d 0 -8px 30px 17px;
+  box-shadow: #26394d47 0 -8px 6px 11px;
 
   &.header-mobile {
     background: url('../../../assets/images/1636016070753.jpg') bottom;
@@ -79,7 +79,7 @@
       background-color: white;
       z-index: 1;
       transition: ease-in-out 0.7s;
-      box-shadow: #26394d 0 -8px 7px 11px;
+      box-shadow: #26394d47 0 -8px 7px 11px;
       color: #333333;
 
       .option {
