@@ -6,10 +6,13 @@
     <app-map id="app-map"></app-map>
   </article>
   <article>
-    <app-commitement id="app-commitement"></app-commitement>
+    <app-section-text id="app-commitement" [title]="'WEBSITE_COMMITEMENT_TITLE'" [icon]="'fa fa-handshake-o'" [text]="'WEBSITE_COMMITEMENT_TEXT'"></app-section-text>
   </article>
   <article>
     <app-card-home (openNestedPictures)="openMorePictures($event)"></app-card-home>
     <app-more-pictures *ngIf="toggle" [imagesToShow]="imagesToShow"></app-more-pictures>
+  </article>
+  <article>
+    <app-section-text id="app-who-are-we" [title]="'WEBSITE_WO_ARE_WE_TITLE'" [icon]="'fa fa-space-shuttle'" [text]="'WEBSITE_WO_ARE_WE_TEXT'"></app-section-text>
   </article>
 </div>

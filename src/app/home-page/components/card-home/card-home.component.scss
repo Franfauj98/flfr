@@ -5,8 +5,12 @@
   cursor: pointer;
 
   .card {
-    width: 22rem;
+    width: 13rem;
     display: flex;
+
+    .card-body {
+      padding: 0.8rem 0.5rem;
+    }
 
     .card-text {
       text-align: center;
@@ -16,10 +20,10 @@
       position: absolute;
       bottom: -18px;
       display: flex;
-      left: calc(50% - 13px);
+      left: calc(50% - 15px);
       border: 1px solid #333;
       border-radius: 52%;
-      padding: 8px;
+      padding: 5px;
       background: white;
 
       i {

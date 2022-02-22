@@ -1,7 +1,7 @@
 <div class="card-container">
   <ng-container *ngFor="let image of imagesToShow; let i = index;">
     <div class="card" (click)="openMorePictures(i)">
-      <img class="card-img-top" [src]="image.pictureTitlePath.path" alt="Card image avocat">
+      <img class="card-img-top" [src]="image.pictureTitlePath.path" alt="Card image">
       <div class="card-body">
         <p class="card-text">{{image.pictureTitlePath.text | translate}}</p>
       </div>

@@ -53,6 +53,22 @@ export class CardHomeComponent {
           new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
           new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
           new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR')
+        ]),
+      new nestedPictureTitlePath(
+        new pictureTitlePath('../../../assets/images/touffe.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
+        [
+          new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
+          new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
+          new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
+          new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR')
+        ]),
+      new nestedPictureTitlePath(
+        new pictureTitlePath('../../../assets/images/touffetouffe2.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
+        [
+          new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
+          new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
+          new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
+          new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR')
         ])
     ];
   }
