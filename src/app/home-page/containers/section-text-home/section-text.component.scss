@@ -6,4 +6,12 @@
   .icon {
     font-size: 5rem;
   }
+
+  &.mobile-device {
+    font-size: 0.8rem;
+
+    .icon {
+      font-size: 1rem;
+    }
+  }
 }

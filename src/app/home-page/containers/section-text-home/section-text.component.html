@@ -1,4 +1,4 @@
-<section class="commitement-container mb-xl-5 mt-xl-5">
+<section [ngClass]="{'mobile-device': userAgentMobile}" class="commitement-container mb-xl-5 mt-xl-5">
   <div class="icon {{icon}}"></div>
   <h3 class="title">{{title | translate}}</h3>
   <div class="commitement" [innerHTML]="text | translate"></div>

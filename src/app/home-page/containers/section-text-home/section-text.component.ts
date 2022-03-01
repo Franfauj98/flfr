@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {BrowserUtils} from '@flfr-app/utils/BrowserUtils';
 
 @Component({
   selector: 'app-section-text',
@@ -10,6 +11,9 @@ export class SectionTextComponent {
   @Input() icon = '';
   @Input() title = '';
   @Input() text = '';
+  userAgentMobile = false;
 
-  constructor() {}
+  constructor() {
+    this.userAgentMobile = BrowserUtils.isMobileDevice();
+  }
 }
