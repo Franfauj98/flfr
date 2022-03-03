@@ -4,19 +4,52 @@ import * as am5radar from '@amcharts/amcharts5/radar';
 import am5themes_Animated from '@amcharts/amcharts5/themes/Animated';
 import * as am5xy from '@amcharts/amcharts5/xy';
 import {AxisRenderer} from '@amcharts/amcharts5/xy';
-import {AfterViewInit, Component, Input} from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {DeliveryOption} from '@flfr-app/delivery/models/deliveryOption';
+import {DeliveryService} from '@flfr-app/delivery/services/delivery.service';
 
 @Component({
   selector: 'app-delivery-chart',
   templateUrl: './delivery-chart.component.html',
   styleUrls: ['./delivery-chart.component.scss']
 })
-export class DeliveryChartComponent implements AfterViewInit {
+export class DeliveryChartComponent implements OnInit, AfterViewInit {
 
-  @Input() deliveryOptions: DeliveryOption[] = [];
+  deliveryOptions: DeliveryOption[] = [];
+  data: any[] = [];
+  private chart: am5radar.RadarChart | undefined;
+  private yAxis: am5xy.CategoryAxis<any> | undefined;
+  private series1: any;
+  private series2: any;
 
-  constructor() {
+  constructor(private deliveryService: DeliveryService) {
+  }
+
+  ngOnInit(): void {
+    this.deliveryService.getDeliveryOptionsObservable().subscribe((delveryOptions: DeliveryOption[]) => {
+      this.deliveryOptions = delveryOptions;
+      if (this.chart && this.yAxis) {
+        let i = -1;
+        this.data = this.deliveryOptions.map(elt => {
+          i = i + 1;
+          return {
+            category: elt.libelle,
+            value: elt.value,
+            full: 40,
+            columnSettings: {
+              // @ts-ignore
+              fill: this.chart.get('colors').getIndex(i)
+            }
+          };
+        });
+        this.yAxis.data.setAll(this.data);
+        this.series1.data.setAll(this.data);
+        this.series2.data.setAll(this.data);
+        this.series1.appear(1000);
+        this.series2.appear(1000);
+        this.chart.appear(1000, 100);
+      }
+    });
   }
 
   ngAfterViewInit(): void {
@@ -34,7 +67,7 @@ export class DeliveryChartComponent implements AfterViewInit {
 
     // Create chart
     // https://www.amcharts.com/docs/v5/charts/radar-chart/
-    const chart = root.container.children.push(am5radar.RadarChart.new(root, {
+    this.chart = root.container.children.push(am5radar.RadarChart.new(root, {
       panX: false,
       panY: false,
       wheelX: undefined,
@@ -47,7 +80,7 @@ export class DeliveryChartComponent implements AfterViewInit {
 
     // Data
     let i = -1;
-    const data = this.deliveryOptions.map(elt => {
+    this.data = this.deliveryOptions.map(elt => {
       i = i + 1;
       return {
         category: elt.libelle,
@@ -55,7 +88,7 @@ export class DeliveryChartComponent implements AfterViewInit {
         full: 40,
         columnSettings: {
           // @ts-ignore
-          fill: chart.get('colors').getIndex(i)
+          fill: this.chart.get('colors').getIndex(i)
         }
       };
     });
@@ -74,7 +107,7 @@ export class DeliveryChartComponent implements AfterViewInit {
       forceHidden: true
     });
 
-    const xAxis = chart.xAxes.push(am5xy.ValueAxis.new(root, {
+    const xAxis = this.chart.xAxes.push(am5xy.ValueAxis.new(root, {
       renderer: xRenderer as AxisRenderer,
       min: 0,
       max: 40,
@@ -99,17 +132,18 @@ export class DeliveryChartComponent implements AfterViewInit {
       forceHidden: true
     });
 
-    const yAxis = chart.yAxes.push(am5xy.CategoryAxis.new(root, {
+    this.yAxis = this.chart.yAxes.push(am5xy.CategoryAxis.new(root, {
       categoryField: 'category',
       renderer: yRenderer as AxisRenderer
     }));
 
-    yAxis.data.setAll(data);
+    this.yAxis.data.setAll(this.data);
 
+    const yAxis = this.yAxis;
 
     // Create series
     // https://www.amcharts.com/docs/v5/charts/radar-chart/#Adding_series
-    const series1 = chart.series.push(am5radar.RadarColumnSeries.new(root, {
+    this.series1 = this.chart.series.push(am5radar.RadarColumnSeries.new(root, {
       xAxis,
       yAxis,
       clustered: false,
@@ -118,17 +152,16 @@ export class DeliveryChartComponent implements AfterViewInit {
       fill: root.interfaceColors.get('alternativeBackground')
     }));
 
-    series1.columns.template.setAll({
+    this.series1.columns.template.setAll({
       width: am5.p100,
       fillOpacity: 0.08,
       strokeOpacity: 0,
       cornerRadius: 20
     });
 
-    series1.data.setAll(data);
+    this.series1.data.setAll(this.data);
 
-
-    const series2 = chart.series.push(am5radar.RadarColumnSeries.new(root, {
+    this.series2 = this.chart.series.push(am5radar.RadarColumnSeries.new(root, {
       xAxis,
       yAxis,
       clustered: false,
@@ -136,7 +169,7 @@ export class DeliveryChartComponent implements AfterViewInit {
       categoryYField: 'category'
     }));
 
-    series2.columns.template.setAll({
+    this.series2.columns.template.setAll({
       width: am5.p100,
       strokeOpacity: 0,
       tooltipText: '{category}: {valueX}€',
@@ -144,12 +177,12 @@ export class DeliveryChartComponent implements AfterViewInit {
       templateField: 'columnSettings'
     });
 
-    series2.data.setAll(data);
+    this.series2.data.setAll(this.data);
 
     // Animate chart and series in
     // https://www.amcharts.com/docs/v5/concepts/animations/#Initial_animation
-    series1.appear(1000);
-    series2.appear(1000);
-    chart.appear(1000, 100);
+    this.series1.appear(1000);
+    this.series2.appear(1000);
+    this.chart.appear(1000, 100);
   }
 }
