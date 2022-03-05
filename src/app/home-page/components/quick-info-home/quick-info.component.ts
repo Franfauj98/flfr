@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {QuickInfo} from '@flfr-app/home-page/models/QuickInfo';
+import {BrowserUtils} from '@flfr-app/utils/BrowserUtils';
 import {TranslateService} from '@ngx-translate/core';
 
 @Component({
@@ -9,6 +10,7 @@ import {TranslateService} from '@ngx-translate/core';
 })
 export class QuickInfoComponent {
   quickInfoList: QuickInfo[] = [];
+  userAgentMobile = false;
 
   constructor(private translateService: TranslateService) {
     this.quickInfoList = [
@@ -22,5 +24,6 @@ export class QuickInfoComponent {
         this.translateService.instant('WEBSITE_QUICK_INFO_TOUSSAINT_TITLE'),
         this.translateService.instant('WEBSITE_QUICK_INFO_TOUSSAINT_INFO'))
     ];
+    this.userAgentMobile = BrowserUtils.isMobileDevice();
   }
 }

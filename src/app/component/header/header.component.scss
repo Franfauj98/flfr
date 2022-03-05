@@ -39,6 +39,10 @@
     .sub-title {
       font-size: 2.2rem;
     }
+
+    &.title-mobile {
+      margin-top: 130px;
+    }
   }
 
   .scroller {
@@ -92,6 +96,11 @@
     .title {
       margin-top: 200px;
     }
+
+    .title-mobile {
+      margin-top: 130px;
+    }
+
   }
 
   .option {
@@ -170,20 +179,20 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 5.5rem;
+    height: 5rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
     background-color: white;
     box-shadow: #26394d 0 -8px 7px 11px;
+    z-index: 1;
 
     .button-option-bars {
       background: transparent;
       border: none;
       font-size: 3.5rem;
       margin-left: 10px;
-      margin-top: 5px;
     }
 
     .company {
@@ -198,7 +207,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    height: calc(100% - 5.5rem);
+    height: calc(100% - 5rem);
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -215,6 +224,7 @@
         align-items: start;
         align-self: start;
         color: #333333;
+        margin-left: 5rem;
       }
 
     }

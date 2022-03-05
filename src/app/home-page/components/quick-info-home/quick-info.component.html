@@ -1,5 +1,6 @@
-<div class="quick-info">
+<div [ngClass]="{'quick-info-mobile': userAgentMobile}" class="quick-info">
   <ng-container *ngFor="let info of quickInfoList">
-    <app-quick-info-element class="element" [icon]="info.icon" [title]="info.title" [info]="info.info"></app-quick-info-element>
+    <app-quick-info-element class="element" [icon]="info.icon" [title]="info.title"
+                            [info]="info.info"></app-quick-info-element>
   </ng-container>
 </div>

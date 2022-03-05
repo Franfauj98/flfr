@@ -23,7 +23,7 @@
     </button>
   </div>
 
-  <div class="title">
+  <div [ngClass]="{'title-mobile': userAgentMobile}" class="title">
     <div class="main-title">
       {{(userAgentMobile ? "WEBSITE_MOBILE_TITLE" : "WEBSITE_TITLE") | translate}}
     </div>

@@ -3,6 +3,10 @@
   flex-direction: row;
   justify-content: space-around;
 
+  &.quick-info-mobile {
+    flex-direction: column;
+  }
+
   .element:nth-child(odd) {
     min-width: 33%;
   }
