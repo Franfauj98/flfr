@@ -7,6 +7,7 @@ import {BehaviorSubject, Observable} from 'rxjs';
 export class DeliveryService {
 
   public deliveryOptions: BehaviorSubject<DeliveryOption[]>;
+  public deliveryOptionSelected: BehaviorSubject<DeliveryOption> = new BehaviorSubject<DeliveryOption>(new DeliveryOption('', 0));
 
   constructor(private translateService: TranslateService) {
     this.deliveryOptions = new BehaviorSubject<DeliveryOption[]>([
@@ -17,9 +18,7 @@ export class DeliveryService {
       new DeliveryOption(this.translateService.instant('WEBSITE_DELIVERY_OPTION_3_NAME'),
         this.translateService.instant('WEBSITE_DELIVERY_OPTION_3_VALUE') as number),
       new DeliveryOption(this.translateService.instant('WEBSITE_DELIVERY_OPTION_4_NAME'),
-        this.translateService.instant('WEBSITE_DELIVERY_OPTION_4_VALUE') as number),
-      new DeliveryOption(this.translateService.instant('WEBSITE_DELIVERY_OPTION_5_NAME'),
-        this.translateService.instant('WEBSITE_DELIVERY_OPTION_5_VALUE') as number),
+        this.translateService.instant('WEBSITE_DELIVERY_OPTION_4_VALUE') as number)
     ]);
   }
 
@@ -27,9 +26,19 @@ export class DeliveryService {
     return this.deliveryOptions.asObservable();
   }
 
+  getDeliveryOptionSelectedObservable(): Observable<DeliveryOption> {
+    return this.deliveryOptionSelected.asObservable();
+  }
+
   addDeliveryOptionsObservable(deliveryOption: DeliveryOption): void {
     const deliveryOptionTmp = this.deliveryOptions.getValue();
-    deliveryOptionTmp.push(deliveryOption);
-    this.deliveryOptions.next(deliveryOptionTmp);
+    if (deliveryOptionTmp.findIndex(elt => elt.libelle === deliveryOption.libelle) === -1) {
+      deliveryOptionTmp.push(deliveryOption);
+      this.deliveryOptions.next(deliveryOptionTmp);
+    }
+  }
+
+  updateDeliveryOptionSelectedObservable(deliveryOption: DeliveryOption): void {
+    this.deliveryOptionSelected.next(deliveryOption);
   }
 }

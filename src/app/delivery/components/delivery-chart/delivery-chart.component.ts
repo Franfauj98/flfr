@@ -29,19 +29,7 @@ export class DeliveryChartComponent implements OnInit, AfterViewInit {
     this.deliveryService.getDeliveryOptionsObservable().subscribe((delveryOptions: DeliveryOption[]) => {
       this.deliveryOptions = delveryOptions;
       if (this.chart && this.yAxis) {
-        let i = -1;
-        this.data = this.deliveryOptions.map(elt => {
-          i = i + 1;
-          return {
-            category: elt.libelle,
-            value: elt.value,
-            full: 40,
-            columnSettings: {
-              // @ts-ignore
-              fill: this.chart.get('colors').getIndex(i)
-            }
-          };
-        });
+        this.fillData();
         this.yAxis.data.setAll(this.data);
         this.series1.data.setAll(this.data);
         this.series2.data.setAll(this.data);
@@ -51,6 +39,22 @@ export class DeliveryChartComponent implements OnInit, AfterViewInit {
       }
     });
   }
+
+  fillData = () => {
+    let i = -1;
+    this.data = this.deliveryOptions.map(elt => {
+      i = i + 1;
+      return {
+        category: elt.libelle,
+        value: elt.value,
+        full: 40,
+        columnSettings: {
+          // @ts-ignore
+          fill: this.chart.get('colors').getIndex(i)
+        }
+      };
+    });
+  };
 
   ngAfterViewInit(): void {
 
@@ -79,19 +83,7 @@ export class DeliveryChartComponent implements OnInit, AfterViewInit {
 
 
     // Data
-    let i = -1;
-    this.data = this.deliveryOptions.map(elt => {
-      i = i + 1;
-      return {
-        category: elt.libelle,
-        value: elt.value,
-        full: 40,
-        columnSettings: {
-          // @ts-ignore
-          fill: this.chart.get('colors').getIndex(i)
-        }
-      };
-    });
+    this.fillData();
 
     // Create axes and their renderers
     // https://www.amcharts.com/docs/v5/charts/radar-chart/#Adding_axes

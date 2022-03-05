@@ -1,0 +1,10 @@
+.delivery-fees-text-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+
+  .price {
+    font-size: 1.4rem;
+  }
+}

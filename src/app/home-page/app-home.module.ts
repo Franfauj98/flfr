@@ -1,7 +1,5 @@
-import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
-import {RouterModule} from '@angular/router';
-import {ServiceWorkerModule} from '@angular/service-worker';
+import {ConnectedModule} from '@flfr-app/connected.module';
 import {AppHomeRoutingModule} from '@flfr-app/home-page/app-home-routing.module';
 import {CardHomeComponent} from '@flfr-app/home-page/components/card-home/card-home.component';
 import {CarouselComponent} from '@flfr-app/home-page/components/carousel-home/carousel.component';
@@ -11,8 +9,6 @@ import {QuickInfoElementComponent} from '@flfr-app/home-page/components/quick-in
 import {QuickInfoComponent} from '@flfr-app/home-page/components/quick-info-home/quick-info.component';
 import {AppHomeComponent} from '@flfr-app/home-page/containers/app-home/app-home.component';
 import {HomeContainerComponent} from '@flfr-app/home-page/containers/home/home-container.component';
-import {SectionTextComponent} from '@flfr-app/home-page/containers/section-text-home/section-text.component';
-import {TranslateModule} from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -23,10 +19,12 @@ import {TranslateModule} from '@ngx-translate/core';
     CardHomeComponent,
     QuickInfoComponent,
     QuickInfoElementComponent,
-    SectionTextComponent,
     CarouselComponent
   ],
-  imports: [TranslateModule, CommonModule, ServiceWorkerModule, RouterModule, AppHomeRoutingModule],
+  imports: [
+    AppHomeRoutingModule,
+    ConnectedModule
+  ],
   bootstrap: [AppHomeComponent]
 })
 export class AppHomeModule {

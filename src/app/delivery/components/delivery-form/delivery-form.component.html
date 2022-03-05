@@ -1,4 +1,8 @@
-<form (submit)="submit()" [formGroup]="locationForm" class="form-container">
-  <label id="location">Où êtes vous ?</label>
-  <input class="form-control" formControlName="location" name="location" placeholder="Ex : Saint-Louis">
+<form (submit)="submit()" class="form-container">
+  <label id="location">Dans quelle ville souhaitez-vous être livré ?</label>
+  <ng2-completer (keydown)="submit()" (keyup)="submit()" (selected)="submit()"
+                 [(ngModel)]="deliveryOptionSelected" [datasource]="dataService" [minSearchLength]="0"
+                 [openOnClick]="true"
+                 [placeholder]="'Ex : Saint-Louis'" [selectOnClick]="true"
+  ></ng2-completer>
 </form>

@@ -1,0 +1,8 @@
+<div class="delivery-fees-text-container">
+  <div *ngIf="optionSelected.libelle !== '' && optionSelected.value !== 0" class="price">
+    <span>Pour {{optionSelected.libelle}} il faudra prévoir environ {{optionSelected.value}} €.</span>
+  </div>
+  <div>
+    <span>N'hésitez pas à nous contacter pour plus d'informations.</span>
+  </div>
+</div>
