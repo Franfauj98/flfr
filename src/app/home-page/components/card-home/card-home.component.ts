@@ -1,6 +1,7 @@
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import {Component, EventEmitter, Output} from '@angular/core';
 import {nestedPictureTitlePath, pictureTitlePath} from '@flfr-app/home-page/models/PictureTitlePath';
+import {BrowserUtils} from '@flfr-app/utils/BrowserUtils';
 
 @Component({
   selector: 'app-card-home',
@@ -26,9 +27,11 @@ import {nestedPictureTitlePath, pictureTitlePath} from '@flfr-app/home-page/mode
 export class CardHomeComponent {
   imagesToShow: nestedPictureTitlePath[] = [];
   isOpen = [false, false, false];
+  userAgentMobile = false;
   @Output() openNestedPictures: EventEmitter<pictureTitlePath[]> = new EventEmitter();
 
   constructor() {
+    this.userAgentMobile = BrowserUtils.isMobileDevice();
     this.imagesToShow = [
       new nestedPictureTitlePath(
         new pictureTitlePath('../../../assets/images/avocat.jpg', 'WEBSITE_CARD_PLANTE_POT'),
@@ -74,16 +77,18 @@ export class CardHomeComponent {
   }
 
   openMorePictures(i: number): void {
-    this.isOpen[i] = !this.isOpen[i];
-    if (this.isOpen[i]) {
-      this.isOpen.forEach((value, index) => {
-        if (index !== i) {
-          this.isOpen[index] = false;
-        }
-      });
-      this.openNestedPictures.emit(this.imagesToShow[i].nested);
-    } else {
-      this.openNestedPictures.emit([]);
+    if (!this.userAgentMobile) {
+      this.isOpen[i] = !this.isOpen[i];
+      if (this.isOpen[i]) {
+        this.isOpen.forEach((value, index) => {
+          if (index !== i) {
+            this.isOpen[index] = false;
+          }
+        });
+        this.openNestedPictures.emit(this.imagesToShow[i].nested);
+      } else {
+        this.openNestedPictures.emit([]);
+      }
     }
   }
 

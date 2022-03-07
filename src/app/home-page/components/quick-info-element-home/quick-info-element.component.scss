@@ -11,4 +11,12 @@
     font-size: 1.8rem;
     margin: 20px 0;
   }
+
+  &.quick-info-element-mobile {
+    margin-bottom: 30px;
+
+    .title {
+      margin: 5px 0;
+    }
+  }
 }
