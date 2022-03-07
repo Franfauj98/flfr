@@ -1,4 +1,4 @@
-<form (submit)="submit()" class="form-container">
+<form (submit)="submit()" [ngClass]="{'form-container-mobile': userAgentMobile}" class="form-container">
   <label id="location">Dans quelle ville souhaitez-vous être livré ?</label>
   <ng2-completer (keydown)="submit()" (keyup)="submit()" (selected)="submit()"
                  [(ngModel)]="deliveryOptionSelected" [datasource]="dataService" [minSearchLength]="0"

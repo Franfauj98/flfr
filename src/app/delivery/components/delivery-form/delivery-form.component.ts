@@ -2,6 +2,7 @@
 import {Component} from '@angular/core';
 import {DeliveryOption} from '@flfr-app/delivery/models/deliveryOption';
 import {DeliveryService} from '@flfr-app/delivery/services/delivery.service';
+import {BrowserUtils} from '@flfr-app/utils/BrowserUtils';
 import {TranslateService} from '@ngx-translate/core';
 import {CompleterData, CompleterService} from 'ng2-completer';
 
@@ -15,10 +16,12 @@ export class DeliveryFormComponent {
   searchData: DeliveryOption[] = [];
   dataService: CompleterData;
   deliveryOptionSelected = '';
+  userAgentMobile = false;
 
   constructor(private deliveryService: DeliveryService,
               private completerService: CompleterService,
               private translateService: TranslateService) {
+    this.userAgentMobile = BrowserUtils.isMobileDevice();
     this.searchData = [
       new DeliveryOption(this.translateService.instant('WEBSITE_DELIVERY_OPTION_1_NAME'),
         this.translateService.instant('WEBSITE_DELIVERY_OPTION_1_VALUE') as number),

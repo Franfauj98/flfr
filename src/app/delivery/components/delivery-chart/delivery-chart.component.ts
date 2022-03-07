@@ -7,6 +7,7 @@ import {AxisRenderer} from '@amcharts/amcharts5/xy';
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {DeliveryOption} from '@flfr-app/delivery/models/deliveryOption';
 import {DeliveryService} from '@flfr-app/delivery/services/delivery.service';
+import {BrowserUtils} from '@flfr-app/utils/BrowserUtils';
 
 @Component({
   selector: 'app-delivery-chart',
@@ -21,8 +22,10 @@ export class DeliveryChartComponent implements OnInit, AfterViewInit {
   private yAxis: am5xy.CategoryAxis<any> | undefined;
   private series1: any;
   private series2: any;
+  userAgentMobile = false;
 
   constructor(private deliveryService: DeliveryService) {
+    this.userAgentMobile = BrowserUtils.isMobileDevice();
   }
 
   ngOnInit(): void {

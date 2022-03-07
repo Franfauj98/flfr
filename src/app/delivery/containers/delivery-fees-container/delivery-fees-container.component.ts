@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {BrowserUtils} from '@flfr-app/utils/BrowserUtils';
 
 @Component({
   selector: 'app-delivery-fees-container',
@@ -6,8 +7,10 @@ import {Component} from '@angular/core';
   styleUrls: ['./delivery-fees-container.component.scss']
 })
 export class DeliveryFeesContainerComponent {
+  userAgentMobile = false;
 
   constructor() {
+    this.userAgentMobile = BrowserUtils.isMobileDevice();
   }
 
 }
