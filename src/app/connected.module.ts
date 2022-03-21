@@ -15,7 +15,6 @@ import {TranslateModule} from '@ngx-translate/core';
   declarations: [
     SectionTextComponent
   ],
-  entryComponents: [],
   providers: [],
   exports: [
     TranslateModule,
