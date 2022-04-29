@@ -1,11 +1,11 @@
 <div [ngClass]="{'quick-info-element-mobile': userAgentMobile}" class="quick-info-element">
   <div class="icon">
-    <i class="{{icon}}"></i>
+    <i class="{{icon | translate}}"></i>
   </div>
   <div class="title">
-    <span>{{title}}</span>
+    <span>{{title | translate}}</span>
   </div>
   <div class="info">
-    <span [innerHTML]="info"></span>
+    <span [innerHTML]="info | translate"></span>
   </div>
 </div>

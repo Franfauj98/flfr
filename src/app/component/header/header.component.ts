@@ -14,7 +14,7 @@ export class HeaderComponent {
   userAgentMobile = false;
   menuMobileOpen = false;
   options = [new MenuOption('WEBSITE_TITLE_OPTION_1', 'home', true),
-    new MenuOption('WEBSITE_TITLE_OPTION_2', 'delivery', false),
+    // new MenuOption('WEBSITE_TITLE_OPTION_2', 'delivery', false),
     new MenuOption('WEBSITE_TITLE_OPTION_3', 'whoWeAre', false),
     new MenuOption('WEBSITE_TITLE_OPTION_4', 'contacts', false)];
 

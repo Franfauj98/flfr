@@ -14,15 +14,15 @@ export class QuickInfoComponent {
 
   constructor(private translateService: TranslateService) {
     this.quickInfoList = [
-      new QuickInfo(this.translateService.instant('WEBSITE_QUICK_INFO_SAINT_VALENTIN_ICON'),
-        this.translateService.instant('WEBSITE_QUICK_INFO_SAINT_VALENTIN_TITLE'),
-        this.translateService.instant('WEBSITE_QUICK_INFO_SAINT_VALENTIN_INFO')),
-      new QuickInfo(this.translateService.instant('WEBSITE_QUICK_INFO_FETE_MERE_ICON'),
-        this.translateService.instant('WEBSITE_QUICK_INFO_FETE_MERE_TITLE'),
-        this.translateService.instant('WEBSITE_QUICK_INFO_FETE_MERE_INFO')),
-      new QuickInfo(this.translateService.instant('WEBSITE_QUICK_INFO_TOUSSAINT_ICON'),
-        this.translateService.instant('WEBSITE_QUICK_INFO_TOUSSAINT_TITLE'),
-        this.translateService.instant('WEBSITE_QUICK_INFO_TOUSSAINT_INFO'))
+      new QuickInfo('WEBSITE_QUICK_INFO_SAINT_VALENTIN_ICON',
+        'WEBSITE_QUICK_INFO_SAINT_VALENTIN_TITLE',
+        'WEBSITE_QUICK_INFO_SAINT_VALENTIN_INFO'),
+      new QuickInfo('WEBSITE_QUICK_INFO_FETE_MERE_ICON',
+        'WEBSITE_QUICK_INFO_FETE_MERE_TITLE',
+        'WEBSITE_QUICK_INFO_FETE_MERE_INFO'),
+      new QuickInfo('WEBSITE_QUICK_INFO_TOUSSAINT_ICON',
+        'WEBSITE_QUICK_INFO_TOUSSAINT_TITLE',
+        'WEBSITE_QUICK_INFO_TOUSSAINT_INFO')
     ];
     this.userAgentMobile = BrowserUtils.isMobileDevice();
   }

@@ -1,8 +1,8 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {ContactsComponent} from './containers/contacts/contacts.component';
+import {ContactContainerComponent} from '@flfr-app/contacts/containers/contact-container/contact-container.component';
 
-const routes: Routes = [{path: '', component: ContactsComponent}];
+const routes: Routes = [{path: '', component: ContactContainerComponent}];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

@@ -9,6 +9,8 @@ import {QuickInfoElementComponent} from '@flfr-app/home-page/components/quick-in
 import {QuickInfoComponent} from '@flfr-app/home-page/components/quick-info-home/quick-info.component';
 import {AppHomeComponent} from '@flfr-app/home-page/containers/app-home/app-home.component';
 import {HomeContainerComponent} from '@flfr-app/home-page/containers/home/home-container.component';
+import {ButtonModule} from 'primeng/button';
+import {CardModule} from 'primeng/card';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import {HomeContainerComponent} from '@flfr-app/home-page/containers/home/home-c
   ],
   imports: [
     AppHomeRoutingModule,
-    ConnectedModule
+    ConnectedModule,
+    CardModule,
+    ButtonModule
   ],
   bootstrap: [AppHomeComponent]
 })

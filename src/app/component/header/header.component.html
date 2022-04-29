@@ -6,14 +6,20 @@
               class="option"><a aria-label="Navigation"
                                 href="/{{option.moduleRoute}}">{{option.libelle | translate}}</a></button>
     </div>
-    <div *ngIf="scrollingMode" class="company">{{"WEBSITE_TITLE_LOGO" | translate}}</div>
+    <div class="company">
+      <img [alt]="'WEBSITE_TITLE_LOGO' | translate" class="company-img" src="/assets/images/logoEntier.png"
+           width="180px">
+    </div>
   </div>
 
   <div class="header-options-mobile" *ngIf="userAgentMobile" (click)="openMenuMobile()">
     <button aria-label="bouton de menu" class="button-option-bars">
       <i class="fa fa-bars"></i>
     </button>
-    <div class="company">{{"WEBSITE_TITLE_LOGO" | translate}}</div>
+    <div class="company">
+      <img [alt]="'WEBSITE_TITLE_LOGO' | translate" class="company-img" src="/assets/images/logoEntier.png"
+           width="100px">
+    </div>
   </div>
   <div class="menu-mobile-open" *ngIf="userAgentMobile && menuMobileOpen">
     <button (click)="changePage(option)" [ngClass]="{'selected': option.selected}"
@@ -29,6 +35,10 @@
     </div>
     <div class="sub-title">
       {{(userAgentMobile ? "WEBSITE_MOBILE_SUB_TITLE" : "WEBSITE_SUB_TITLE") | translate}}
+    </div>
+    <div *ngIf="!userAgentMobile" class="villes">
+      <div>{{"WEBSITE_SUB_TITLE_VILLE1" | translate}}</div>
+      <div class="ville2">{{"WEBSITE_SUB_TITLE_VILLE2" | translate}}</div>
     </div>
   </div>
   <button (click)="scroll()" aria-label="Bouton de scroll dans la page" class="scroller" id="scroller-button"><i

@@ -3,13 +3,13 @@
   display: flex;
   flex-direction: column;
   color: white;
-  background: url('../../../assets/images/imageFond.jpg');
+  background: url('../../../assets/images/horticultureheader.JPG');
   background-size: cover;
   height: 450px;
   box-shadow: #26394d47 0 -8px 6px 11px;
 
   &.header-mobile {
-    background: url('../../../assets/images/uriel-WS4JcpoZz6E-unsplash.jpg') bottom;
+    background: url('../../../assets/images/huningues.JPG') bottom;
     background-size: 100%;
   }
 
@@ -42,6 +42,16 @@
 
     &.title-mobile {
       margin-top: 150px;
+    }
+
+    .villes {
+      display: flex;
+      justify-content: center;
+      font-size: 1.5rem;
+
+      .ville2 {
+        padding-left: 70px;
+      }
     }
   }
 
@@ -107,7 +117,7 @@
     border: none;
     background: none;
     color: white;
-    width: 220px;
+    width: 225px;
     height: 100px;
 
     &:hover {
@@ -134,7 +144,7 @@
       content: '';
       position: absolute;
       bottom: 5px;
-      left: 0;
+      left: -1px;
       width: 100%;
       height: 0.2rem;
       background-color: hotpink;

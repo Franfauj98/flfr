@@ -1,13 +1,16 @@
-<div [ngClass]="{'card-container-mobile': userAgentMobile}" class="card-container">
+<div [ngClass]="{'col': userAgentMobile, 'row': !userAgentMobile}">
   <ng-container *ngFor="let image of imagesToShow; let i = index;">
-    <div class="card" (click)="openMorePictures(i)">
-      <img [src]="image.pictureTitlePath.path" alt="Card image" class="card-img-top">
-      <div class="card-body">
-        <p class="card-text">{{image.pictureTitlePath.text | translate}}</p>
-      </div>
-      <div *ngIf="!userAgentMobile" [@openClose]="isOpen[i] ? 'open' : 'closed'" class="more-photos">
-        <i class="fa fa-chevron-up"></i>
-      </div>
+    <div [ngClass]="{'row-10 mt-4': userAgentMobile, 'col-3': !userAgentMobile}">
+      <p-card styleClass="p-card-shadow"
+              subheader="{{image.pictureTitlePath.text | translate}}">
+        <ng-template pTemplate="header">
+          <img [src]="image.pictureTitlePath.path" alt="Card image" class="card-img-top">
+        </ng-template>
+        <ng-template pTemplate="footer">
+          <p-button (click)="openMorePictures(i)" icon="pi pi-plus" label="Voir plus"
+                    styleClass="p-button-secondary"></p-button>
+        </ng-template>
+      </p-card>
     </div>
   </ng-container>
 </div>

@@ -34,7 +34,7 @@ export class CardHomeComponent {
     this.userAgentMobile = BrowserUtils.isMobileDevice();
     this.imagesToShow = [
       new nestedPictureTitlePath(
-        new pictureTitlePath('../../../assets/images/avocat.jpg', 'WEBSITE_CARD_PLANTE_POT'),
+        new pictureTitlePath('../../../assets/images/avocat2.jpg', 'WEBSITE_CARD_PLANTE_POT'),
         [
           new pictureTitlePath('../../../assets/images/touffe.jpg', 'WEBSITE_CARD_PLANTE_POT'),
           new pictureTitlePath('../../../assets/images/touffe2.jpg', 'WEBSITE_CARD_PLANTE_POT'),
@@ -64,15 +64,15 @@ export class CardHomeComponent {
           new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
           new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
           new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR')
-        ]),
-      new nestedPictureTitlePath(
-        new pictureTitlePath('../../../assets/images/touffetouffe2.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
-        [
-          new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
-          new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
-          new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
-          new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR')
         ])
+      // new nestedPictureTitlePath(
+      //   new pictureTitlePath('../../../assets/images/touffetouffe2.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
+      //   [
+      //     new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
+      //     new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
+      //     new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
+      //     new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR')
+      //   ])
     ];
   }
 
