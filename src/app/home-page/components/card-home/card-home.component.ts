@@ -34,7 +34,7 @@ export class CardHomeComponent {
     this.userAgentMobile = BrowserUtils.isMobileDevice();
     this.imagesToShow = [
       new nestedPictureTitlePath(
-        new pictureTitlePath('../../../assets/images/avocat2.jpg', 'WEBSITE_CARD_PLANTE_POT'),
+        new pictureTitlePath('../../../assets/images/avocat2.webp', 'WEBSITE_CARD_PLANTE_POT'),
         [
           new pictureTitlePath('../../../assets/images/touffe.jpg', 'WEBSITE_CARD_PLANTE_POT'),
           new pictureTitlePath('../../../assets/images/touffe2.jpg', 'WEBSITE_CARD_PLANTE_POT'),

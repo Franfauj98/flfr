@@ -12,11 +12,15 @@ const routes: Routes = [
   },
   {
     path: 'contacts',
-    loadChildren: () => import('./contacts/contacts.module').then(m => m.ContactsModule)
+    loadChildren: () => import('@flfr-app/contacts/contacts.module').then(m => m.ContactsModule)
+  },
+  {
+    path: 'whoWeAre',
+    loadChildren: () => import('@flfr-app/whoWeAre/who-we-are.module').then(m => m.WhoWeAreModule)
   },
   {
     path: 'delivery',
-    loadChildren: () => import('./delivery/delivery.module').then(m => m.DeliveryModule)
+    loadChildren: () => import('@flfr-app/delivery/delivery.module').then(m => m.DeliveryModule)
   },
   {
     path: '**',

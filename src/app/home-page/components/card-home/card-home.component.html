@@ -6,7 +6,7 @@
         <ng-template pTemplate="header">
           <img [src]="image.pictureTitlePath.path" alt="Card image" class="card-img-top">
         </ng-template>
-        <ng-template pTemplate="footer">
+        <ng-template *ngIf="!userAgentMobile" pTemplate="footer">
           <p-button (click)="openMorePictures(i)" icon="pi pi-plus" label="Voir plus"
                     styleClass="p-button-secondary"></p-button>
         </ng-template>
