@@ -1,12 +1,11 @@
 <div [ngClass]="{'col': userAgentMobile, 'row justify-content-around': !userAgentMobile}">
-  <div [ngClass]="{'row-10': userAgentMobile, 'col-xl-3': !userAgentMobile}" class="d-flex justify-content-center">
+  <div [ngClass]="{'row-10': userAgentMobile, 'col-3': !userAgentMobile}" class="d-flex justify-content-center">
     <p-card header="Magasin Saint-Louis" styleClass="p-card-shadow"
             subheader="34 Rue de Mulhouse, 68300">
       <ng-template pTemplate="header">
         <img alt="Card" src="assets/images/saintLouis.webp">
       </ng-template>
-      <p>Nous sommes ouverts du ... au ... entre ... et ... . Nous serons ravis de vous accueillir dans notre boutique
-        au coeur du centre ville de Saint-Louis pour vous donner des conseils sur mesure.</p>
+      <p>{{'WEBSITE_CONTACT_MAGASIN_SAINT_LOUIS' | translate}}</p>
       <ng-template pTemplate="footer">
         <p-button
           (click)="openLink('https://www.google.com/maps/place/Fleurs+Fries/@47.5875362,7.5620803,88m/data=!3m1!1e3!4m5!3m4!1s0x4791b95dea7a8f31:0xde672b49d6b9ee7d!8m2!3d47.5875941!4d7.5620048')"
@@ -15,16 +14,14 @@
       </ng-template>
     </p-card>
   </div>
-  <div [ngClass]="{'row-10 mt-4': userAgentMobile, 'col-xl-3 mt-8': !userAgentMobile}"
+  <div [ngClass]="{'row-10 mt-4': userAgentMobile, 'col-3 mt-8': !userAgentMobile}"
        class="d-flex justify-content-center">
     <p-card header="L'horticulture" styleClass="p-card-shadow"
             subheader="14 Rue Vauban, 68330">
       <ng-template pTemplate="header">
         <img alt="Card" src="assets/images/horticulture.JPG">
       </ng-template>
-      <p>Nous sommes ouverts du ... au ... entre ... et ... . Nous serons ravis de vous accueillir dans notre
-        horticulture au coeur du centre ville de Huningue pour fleurir et aménager vos intérieurs comme vos
-        extérieurs.</p>
+      <p>{{'WEBSITE_CONTACT_MAGASIN_HORTICULTURE' | translate}}</p>
       <ng-template pTemplate="footer">
         <p-button
           (click)="openLink('https://www.google.com/maps/place/14+Rue+Vauban,+68330+Huningue/@47.5936357,7.5839137,144m/data=!3m2!1e3!4b1!4m5!3m4!1s0x4791bbd5c1382aeb:0x8dd45a06923c09b!8m2!3d47.5936357!4d7.5844609')"
@@ -33,14 +30,13 @@
       </ng-template>
     </p-card>
   </div>
-  <div [ngClass]="{'row-10 mt-4': userAgentMobile, 'col-xl-3': !userAgentMobile}" class="d-flex justify-content-center">
+  <div [ngClass]="{'row-10 mt-4': userAgentMobile, 'col-3': !userAgentMobile}" class="d-flex justify-content-center">
     <p-card header="Magasin Huningue" styleClass="p-card-shadow"
             subheader="10 Rue du Maréchal Foch, 68330">
       <ng-template pTemplate="header">
         <img alt="Card" src="assets/images/huningues.JPG">
       </ng-template>
-      <p>Nous sommes ouverts du ... au ... entre ... et ... . Nous serons ravis de vous accueillir dans notre boutique
-        au coeur du centre ville de Huningue pour vous donner des conseils sur mesure.</p>
+      <p>{{'WEBSITE_CONTACT_MAGASIN_HUNINGUE' | translate}}</p>
       <ng-template pTemplate="footer">
         <p-button
           (click)="openLink('https://www.google.com/maps/place/10+Rue+du+Mar%C3%A9chal+Foch,+68330+Huningue/@47.5925576,7.5842199,144m/data=!3m2!1e3!4b1!4m5!3m4!1s0x4791bbd58c321473:0xc1a27ca82da5d815!8m2!3d47.5925576!4d7.5847671')"

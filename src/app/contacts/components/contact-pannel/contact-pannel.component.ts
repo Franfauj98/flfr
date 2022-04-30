@@ -18,5 +18,5 @@ export class ContactPannelComponent implements OnInit {
 
   openLink = (path: string) => {
     window.open(path);
-  };
+  }
 }
