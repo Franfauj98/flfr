@@ -15,8 +15,8 @@ export class MapComponent {
 
   getMapMagasin(): string {
     if (this.userAgentMobile) {
-      return 'assets/images/mapMagasinMobile.png';
+      return 'assets/images/mapMagasinMobile.webp';
     }
-    return 'assets/images/mapMagasin.png';
+    return 'assets/images/mapMagasin.webp';
   }
 }
