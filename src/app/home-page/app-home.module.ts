@@ -11,6 +11,7 @@ import {AppHomeComponent} from '@flfr-app/home-page/containers/app-home/app-home
 import {HomeContainerComponent} from '@flfr-app/home-page/containers/home/home-container.component';
 import {ButtonModule} from 'primeng/button';
 import {CardModule} from 'primeng/card';
+import {DividerModule} from 'primeng/divider';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {CardModule} from 'primeng/card';
     AppHomeRoutingModule,
     ConnectedModule,
     CardModule,
-    ButtonModule
+    ButtonModule,
+    DividerModule
   ],
   bootstrap: [AppHomeComponent]
 })

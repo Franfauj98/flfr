@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   color: white;
-  background: url('../../../assets/images/horticultureheader.JPG');
+  background: url('../../../assets/images/accueil.webp');
   background-size: cover;
   height: 450px;
   box-shadow: #26394d47 0 -8px 6px 11px;
@@ -20,6 +20,10 @@
     font-size: 1.4rem;
     justify-content: space-between;
 
+    .option {
+      text-shadow: 4px 3px 4px #333;
+    }
+
 
     .company {
       align-self: center;
@@ -31,6 +35,7 @@
     text-align: center;
     color: white;
     margin-top: 100px;
+    text-shadow: 4px 3px 4px #333;
 
     .main-title {
       font-size: 3.5rem;
@@ -97,6 +102,8 @@
       color: #333333;
 
       .option {
+        text-shadow: none;
+
         a {
           color: #333333;
         }

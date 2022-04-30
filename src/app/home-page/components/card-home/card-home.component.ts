@@ -34,45 +34,37 @@ export class CardHomeComponent {
     this.userAgentMobile = BrowserUtils.isMobileDevice();
     this.imagesToShow = [
       new nestedPictureTitlePath(
-        new pictureTitlePath('../../../assets/images/avocat2.webp', 'WEBSITE_CARD_PLANTE_POT'),
+        new pictureTitlePath('../../../assets/images/fleursCoupees1.webp', 'WEBSITE_CARD_PLANTE_POT'),
         [
-          new pictureTitlePath('../../../assets/images/touffe.jpg', 'WEBSITE_CARD_PLANTE_POT'),
-          new pictureTitlePath('../../../assets/images/touffe2.jpg', 'WEBSITE_CARD_PLANTE_POT'),
-          new pictureTitlePath('../../../assets/images/touffetouffe.jpg', 'WEBSITE_CARD_PLANTE_POT'),
-          new pictureTitlePath('../../../assets/images/touffetouffe2.jpg', 'WEBSITE_CARD_PLANTE_POT')
+          new pictureTitlePath('../../../assets/images/fleursCoupees2.webp', 'WEBSITE_CARD_PLANTE_POT'),
+          new pictureTitlePath('../../../assets/images/composition1.webp', 'WEBSITE_CARD_PLANTE_POT'),
+          new pictureTitlePath('../../../assets/images/composition2.webp', 'WEBSITE_CARD_PLANTE_POT'),
+          new pictureTitlePath('../../../assets/images/composition3.webp', 'WEBSITE_CARD_PLANTE_POT')
         ]),
       new nestedPictureTitlePath(
-        new pictureTitlePath('../../../assets/images/citron.jpg', 'WEBSITE_CARD_PLANTE_BOUTURE'),
+        new pictureTitlePath('../../../assets/images/PlanteInterieur1.webp', 'WEBSITE_CARD_PLANTE_INTERIEUR'),
         [
-          new pictureTitlePath('../../../assets/images/citron.jpg', 'WEBSITE_CARD_PLANTE_BOUTURE'),
-          new pictureTitlePath('../../../assets/images/citron.jpg', 'WEBSITE_CARD_PLANTE_BOUTURE'),
-          new pictureTitlePath('../../../assets/images/citron.jpg', 'WEBSITE_CARD_PLANTE_BOUTURE'),
-          new pictureTitlePath('../../../assets/images/citron.jpg', 'WEBSITE_CARD_PLANTE_BOUTURE')
+          new pictureTitlePath('../../../assets/images/PlanteInterieur2.webp', 'WEBSITE_CARD_PLANTE_INTERIEUR'),
+          new pictureTitlePath('../../../assets/images/PlanteInterieur3.webp', 'WEBSITE_CARD_PLANTE_INTERIEUR'),
+          new pictureTitlePath('../../../assets/images/PlanteInterieur4.webp', 'WEBSITE_CARD_PLANTE_INTERIEUR'),
+          new pictureTitlePath('../../../assets/images/PlanteInterieur5.webp', 'WEBSITE_CARD_PLANTE_INTERIEUR')
         ]),
       new nestedPictureTitlePath(
-        new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
+        new pictureTitlePath('../../../assets/images/PlanteExte1.webp', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
         [
-          new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
-          new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
-          new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
-          new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR')
+          new pictureTitlePath('../../../assets/images/PlanteExte2.webp', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
+          new pictureTitlePath('../../../assets/images/PlanteExte3.webp', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
+          new pictureTitlePath('../../../assets/images/PlanteExte4.webp', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
+          new pictureTitlePath('../../../assets/images/PlanteExte5.webp', 'WEBSITE_CARD_PLANTE_EXTERIEUR')
         ]),
       new nestedPictureTitlePath(
-        new pictureTitlePath('../../../assets/images/touffe.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
+        new pictureTitlePath('../../../assets/images/Replant1.webp', 'WEBSITE_CARD_PLANTE_REPLANTS'),
         [
-          new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
-          new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
-          new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
-          new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR')
+          new pictureTitlePath('../../../assets/images/Replant2.webp', 'WEBSITE_CARD_PLANTE_REPLANTS'),
+          new pictureTitlePath('../../../assets/images/Replant3.webp', 'WEBSITE_CARD_PLANTE_REPLANTS'),
+          new pictureTitlePath('../../../assets/images/Replant4.webp', 'WEBSITE_CARD_PLANTE_REPLANTS'),
+          new pictureTitlePath('../../../assets/images/Replant5.webp', 'WEBSITE_CARD_PLANTE_REPLANTS')
         ])
-      // new nestedPictureTitlePath(
-      //   new pictureTitlePath('../../../assets/images/touffetouffe2.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
-      //   [
-      //     new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
-      //     new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
-      //     new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR'),
-      //     new pictureTitlePath('../../../assets/images/vigne.jpg', 'WEBSITE_CARD_PLANTE_EXTERIEUR')
-      //   ])
     ];
   }
 
