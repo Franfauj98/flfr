@@ -45,3 +45,13 @@
     }
   }
 }
+
+:host::ng-deep {
+  @media (max-width: 1200px) {
+    .user-agent-desktop {
+      .p-card-subtitle {
+        font-size: 13px;
+      }
+    }
+  }
+}

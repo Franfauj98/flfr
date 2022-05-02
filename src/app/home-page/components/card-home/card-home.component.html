@@ -1,6 +1,6 @@
 <div [ngClass]="{'col': userAgentMobile, 'row': !userAgentMobile}">
   <ng-container *ngFor="let image of imagesToShow; let i = index;">
-    <div [ngClass]="{'row-10 mt-4': userAgentMobile, 'col-3': !userAgentMobile}">
+    <div [ngClass]="{'row-10 mt-4': userAgentMobile, 'col-3 user-agent-desktop': !userAgentMobile}">
       <p-card styleClass="p-card-shadow"
               subheader="{{image.pictureTitlePath.text | translate}}">
         <ng-template pTemplate="header">

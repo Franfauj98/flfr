@@ -16,6 +16,12 @@
   }
 }
 
+@media (max-width: 1200px) {
+  body {
+    font-size: 0.8rem !important;
+  }
+}
+
 :root {
   --text-color: #495057;
   --text-color-secondary: #6c757d;
