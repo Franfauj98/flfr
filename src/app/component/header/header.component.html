@@ -30,12 +30,12 @@
   </div>
 
   <div [ngClass]="{'title-mobile': userAgentMobile}" class="title">
-    <div class="main-title">
+    <h1 class="main-title">
       {{(userAgentMobile ? "WEBSITE_MOBILE_TITLE" : "WEBSITE_TITLE") | translate}}
-    </div>
-    <div class="sub-title">
+    </h1>
+    <h2 class="sub-title">
       {{(userAgentMobile ? "WEBSITE_MOBILE_SUB_TITLE" : "WEBSITE_SUB_TITLE") | translate}}
-    </div>
+    </h2>
     <div *ngIf="!userAgentMobile" class="villes">
       <div>{{"WEBSITE_SUB_TITLE_VILLE1" | translate}}</div>
       <div class="ville2">{{"WEBSITE_SUB_TITLE_VILLE2" | translate}}</div>
