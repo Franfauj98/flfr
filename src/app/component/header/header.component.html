@@ -1,4 +1,4 @@
-<header class="header" [ngClass]="{'scrolling-mode': scrollingMode, 'header-mobile': userAgentMobile}">
+<header class="header" [ngClass]="{'scrolling-mode': scrollingMode, 'header-mobile': userAgentMobile}" *ngIf="!userAgentMobile">
   <div class="header-options" *ngIf="!userAgentMobile">
     <div>
       <button (click)="changePage(option)" [ngClass]="{'selected': option.selected}" aria-label="changement de page"

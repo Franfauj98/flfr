@@ -18,7 +18,7 @@ export class HeaderComponent {
     new MenuOption('WEBSITE_TITLE_OPTION_3', 'whoWeAre', false),
     new MenuOption('WEBSITE_TITLE_OPTION_4', 'contacts', false)];
 
-  constructor(private domService: DomService) {
+  constructor(private _domService: DomService) {
     this.userAgentMobile = BrowserUtils.isMobileDevice();
     const optionSelected = this.options.find(o => document.URL.endsWith(o.moduleRoute));
     if (optionSelected) {
@@ -37,6 +37,6 @@ export class HeaderComponent {
   }
 
   public scroll(): void {
-    this.domService.scrollToElement('scroller-button');
+    this._domService.scrollToElement('scroller-button');
   }
 }
