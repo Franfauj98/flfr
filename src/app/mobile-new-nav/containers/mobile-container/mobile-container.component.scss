@@ -35,13 +35,13 @@
     }
 
     &.section-1 {
-      background: url('/assets/images/mobile/mobileBG1.jpg');
+      background: url('/assets/images/mobile/mobileBG1.webp');
       background-size: cover;
     }
 
     &.section-2 {
-      height: 120vh;
-      background: url('/assets/images/mobile/mobileBG2.jpg');
+      height: 133vh;
+      background: url('/assets/images/mobile/mobileBG2.webp');
       background-size: cover;
 
       h1 {
@@ -49,6 +49,21 @@
         color: white;
         text-align: center;
       }
+
+      .fa {
+        font-size: 1.5rem;
+      }
+    }
+
+    &.section-3 {
+      background: url('/assets/images/mobile/mobileBG3.webp');
+      background-size: cover;
+      color: white;
+    }
+
+    &.section-4 {
+      height: 40vh;
+      padding-top: 80px;
     }
   }
 }

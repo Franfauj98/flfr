@@ -10,6 +10,7 @@ import {MobileComponent} from "@flfr-app/mobile-new-nav/containers/mobile/mobile
 import {
   MobileContainerComponent
 } from "@flfr-app/mobile-new-nav/containers/mobile-container/mobile-container.component";
+import {GalleriaModule} from "primeng/galleria";
 
 
 @NgModule({
@@ -17,14 +18,15 @@ import {
     MobileComponent,
     MobileContainerComponent
   ],
-  imports: [
-    CommonModule,
-    MobileRoutingModule,
-    DividerModule,
-    ButtonModule,
-    CardModule,
-    TranslateModule
-  ]
+    imports: [
+        CommonModule,
+        MobileRoutingModule,
+        DividerModule,
+        ButtonModule,
+        CardModule,
+        TranslateModule,
+        GalleriaModule
+    ]
 })
 export class MobileModule {
 }

@@ -1,16 +1,15 @@
 <section class="container">
-  <div class="mobile-header flex flex-row justify-content-between pl-3 pr-3 align-items-center w-100 z-1 bg-gray-50"
+  <div class="mobile-header flex flex-row justify-content-between pl-3 pr-3 align-items-center w-100 z-2 bg-gray-50"
        (click)="displayHeader()">
     <h2>{{"WEBSITE_MOBILE_TITLE" | translate}}</h2>
     <i class="pi pi-align-right cursor-pointer"></i>
   </div>
-  <div *ngIf="displayHeaderChoice" class="mobile-header-menu bg-gray-50 w-100 flex flex-column justify-content-around">
+  <div *ngIf="displayHeaderChoice" class="mobile-header-menu bg-gray-50 w-100 z-1 flex flex-column justify-content-around">
     <h5 (click)="goToScreen(divOne)">Accueil</h5>
     <h5 (click)="goToScreen(divTwo)">Ce que nous faisons</h5>
-    <h5 (click)="goToScreen(divThree)">Nos engagements</h5>
-    <h5 (click)="goToScreen(divThree)">Notre histoire</h5>
-    <h5 (click)="goToScreen(divThree)">Bibliothèque</h5>
-    <h5 (click)="goToScreen(divThree)">Contact</h5>
+    <h5 (click)="goToScreen(divThree)">Nos engagements / Notre histoire</h5>
+    <h5 (click)="goToScreen(divFour)">Bibliothèque</h5>
+    <h5 (click)="goToScreen(divFive)">Horaires / Contact</h5>
   </div>
   <div class="text-box section-1" #one>
     <h1>{{"WEBSITE_MOBILE_TITLE" | translate}}</h1>
@@ -18,50 +17,142 @@
     <p class="mt-1">{{'WEBSITE_MOBILE_PART_1' | translate}}</p>
   </div>
   <div class="text-box section-2" #two>
-    <h1>Car nous avons à coeur de vous accompagner pour tous les évènements marquants de votre vie.</h1>
+    <h1>Nous vous accompagnons pour tous les évènements marquants de votre vie.</h1>
     <div class="col-12 md:col-6 xl:col-4 p-3">
       <div class="surface-card shadow-2 border-round p-4">
         <div class="flex border-bottom-1 surface-border pb-4">
-          <img src="assets/images/blocks/avatars/circle/avatar-f-1.png" class="mr-3" style="width: 70px; height: 70px;">
-          <div class="flex flex-column align-items-start"><span
-            class="text-xl text-900 font-medium mb-1">Lindsay Connor</span><span class="text-600 font-medium mb-2">Test Engineer</span><span
-            class="bg-blue-50 text-blue-400 border-round inline-flex py-1 px-2 text-sm">Editor</span></div>
+          <div class="flex flex-column align-items-start">
+            <span class="text-xl text-900 font-medium mb-1">Mariages.</span>
+            <span
+              class="text-600 font-medium mb-2">Nos plus belles compositions pour le plus beau jour de votre vie !</span>
+            <span class="bg-blue-50 text-blue-400 border-round inline-flex py-1 px-2 text-sm">Contactez-nous pour découvrir nos prestations sur mesure.</span>
+          </div>
         </div>
         <div class="flex justify-content-between pt-4">
-          <span>COUCOU</span>
+          <span><i class="fa fa-heart"></i></span>
         </div>
       </div>
     </div>
     <div class="col-12 md:col-6 xl:col-4 p-3">
       <div class="surface-card shadow-2 border-round p-4">
-        <div class="flex border-bottom-1 surface-border pb-4"><img
-          src="assets/images/blocks/avatars/circle/avatar-m-1.png" class="mr-3" style="width: 70px; height: 70px;">
-          <div class="flex flex-column align-items-start"><span
-            class="text-xl text-900 font-medium mb-1">James McAvoy</span><span class="text-600 font-medium mb-2">Project Manager</span><span
-            class="bg-purple-50 text-purple-400 border-round inline-flex py-1 px-2 text-sm">Contributor</span></div>
+        <div class="flex border-bottom-1 surface-border pb-4">
+          <div class="flex flex-column align-items-start">
+            <span class="text-xl text-900 font-medium mb-1">Plaisir d'offrir.</span>
+            <span class="text-600 font-medium mb-2">Anniversaires, Saint-Valentin, Fête des Mères ou simplement pour faire plaisir !</span>
+            <span class="bg-purple-50 text-purple-400 border-round inline-flex py-1 px-2 text-sm">Des fleurs pour chaque occasion.</span>
+          </div>
         </div>
         <div class="flex justify-content-between pt-4">
-          <span>COUCOU</span>
+          <span><i class="fa fa-gift"></i></span>
         </div>
       </div>
     </div>
     <div class="col-12 md:col-6 xl:col-4 p-3">
       <div class="surface-card shadow-2 border-round p-4">
-        <div class="flex border-bottom-1 surface-border pb-4"><img
-          src="assets/images/blocks/avatars/circle/avatar-f-2.png" class="mr-3" style="width: 70px; height: 70px;">
-          <div class="flex flex-column align-items-start"><span
-            class="text-xl text-900 font-medium mb-1">Aisha Jones</span><span
-            class="text-600 font-medium mb-2">Designer</span><span
-            class="bg-blue-50 text-blue-400 border-round inline-flex py-1 px-2 text-sm">Editor</span></div>
+        <div class="flex border-bottom-1 surface-border pb-4">
+          <div class="flex flex-column align-items-start">
+            <span class="text-xl text-900 font-medium mb-1">Evènements.</span>
+            <span class="text-600 font-medium mb-2">Baptême, deuil, évènements spéciaux... <br> De la création à la livraison : des professionnels à votre écoute.</span>
+            <span class="bg-blue-50 text-blue-400 border-round inline-flex py-1 px-2 text-sm">Fleurs Fries vous accompagne.</span>
+          </div>
         </div>
         <div class="flex justify-content-between pt-4">
-          <span>COUCOU</span>
+          <span><i class="fa fa-tree"></i></span>
         </div>
       </div>
     </div>
   </div>
   <div class="text-box section-3" #three>
-    <h3>Section 3</h3>
-    <p>Random text</p>
+    <div class="pt-6 text-right">
+      <h2>Nos engagements :</h2>
+      <p-divider></p-divider>
+      <p class="font-medium">
+        Nous nous engageons au quotidien pour vous fournir des produits responsables et de qualité. <br>
+        Vous trouverez un ensemble de plantes cultivées au sein de notre espace horticole à Huningue.
+      </p>
+      <p-divider></p-divider>
+      <p class="font-medium">
+        Nous avons à coeur de favoriser les circuits courts en travaillant avec des fournisseurs et producteurs
+        locaux.<br>
+        En boutique ou à l'horticulture, retrouvez des profesionnels passionnés qui vous partageront leurs meilleurs
+        conseils.
+      </p>
+    </div>
+    <div class="pt-6 text-left">
+      <h2>Une entreprise familiale : </h2>
+      <p-divider></p-divider>
+      <p class="font-medium">
+        Fleuristes depuis plusieurs générations, notre expérience fait notre savoir-faire. Pour nous connaître
+        davantage, découvrez notre histoire.
+      </p>
+      <p-divider></p-divider>
+      <p class="font-medium">
+        Fleurs Fries a été fondée en en 1971 par Yvonne et Louis Fries,
+        lui-même issu d’une famille de maraîchers et horticulteurs. C’est à Huningue, face à la place Abatucci qu’ils
+        ouvrirent leur premier établissement.<br>
+        Aujourd’hui tenue par les fils de ses fondateurs, Fleurs Fries continue de se développer sur des valeurs de
+        partage et de transmission.
+      </p>
+    </div>
   </div>
+
+  <div class="text-box section-4 bg-bluegray-50" #four>
+    <p-galleria [value]="item" [containerStyle]="{'max-width': '640px'}" [numVisible]="5"
+                [showThumbnails]="false" [showIndicators]="true" [autoPlay]="true">
+      <ng-template pTemplate="item" let-item>
+        <img [src]="item.previewImageSrc" style="width: 100%; display: block;" />
+      </ng-template>
+    </p-galleria>
+  </div>
+
+  <div class="text-box section-5 bg-bluegray-50" #five>
+    <div class="col">
+      <div class="d-flex justify-content-center row-10">
+        <p-card header="Magasin Saint-Louis" styleClass="p-card-shadow"
+                subheader="34 Rue de Mulhouse, 68300">
+          <ng-template pTemplate="header">
+            <img alt="Fleurs Fries" src="assets/images/saintLouis.webp">
+          </ng-template>
+          <p>{{'WEBSITE_CONTACT_MAGASIN_SAINT_LOUIS' | translate}}</p>
+          <ng-template pTemplate="footer">
+            <p-button
+              (click)="openLink('https://www.google.com/maps/place/Fleurs+Fries/@47.5875362,7.5620803,88m/data=!3m1!1e3!4m5!3m4!1s0x4791b95dea7a8f31:0xde672b49d6b9ee7d!8m2!3d47.5875941!4d7.5620048')"
+              icon="pi pi-car" label="Y aller !"
+              styleClass="p-button-secondary"></p-button>
+          </ng-template>
+        </p-card>
+      </div>
+      <div class="d-flex justify-content-center row-10 mt-4">
+        <p-card header="L'horticulture" styleClass="p-card-shadow"
+                subheader="14 Rue Vauban, 68330">
+          <ng-template pTemplate="header">
+            <img alt="Fleurs Fries" src="assets/images/horticulture.webp">
+          </ng-template>
+          <p>{{'WEBSITE_CONTACT_MAGASIN_HORTICULTURE' | translate}}</p>
+          <ng-template pTemplate="footer">
+            <p-button
+              (click)="openLink('https://www.google.com/maps/place/14+Rue+Vauban,+68330+Huningue/@47.5936357,7.5839137,144m/data=!3m2!1e3!4b1!4m5!3m4!1s0x4791bbd5c1382aeb:0x8dd45a06923c09b!8m2!3d47.5936357!4d7.5844609')"
+              icon="pi pi-car" label="Y aller !"
+              styleClass="p-button-secondary"></p-button>
+          </ng-template>
+        </p-card>
+      </div>
+      <div class="d-flex justify-content-center row-10 mt-4">
+        <p-card header="Magasin Huningue" styleClass="p-card-shadow"
+                subheader="10 Rue du Maréchal Foch, 68330">
+          <ng-template pTemplate="header">
+            <img alt="Fleurs Fries" src="assets/images/huningues.webp">
+          </ng-template>
+          <p>{{'WEBSITE_CONTACT_MAGASIN_HUNINGUE' | translate}}</p>
+          <ng-template pTemplate="footer">
+            <p-button
+              (click)="openLink('https://www.google.com/maps/place/10+Rue+du+Mar%C3%A9chal+Foch,+68330+Huningue/@47.5925576,7.5842199,144m/data=!3m2!1e3!4b1!4m5!3m4!1s0x4791bbd58c321473:0xc1a27ca82da5d815!8m2!3d47.5925576!4d7.5847671')"
+              icon="pi pi-car" label="Y aller !"
+              styleClass="p-button-secondary"></p-button>
+          </ng-template>
+        </p-card>
+      </div>
+    </div>
+  </div>
+
 </section>
